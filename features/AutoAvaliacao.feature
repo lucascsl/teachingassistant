@@ -29,3 +29,10 @@ Cenário: auto-avaliação inválida (controlador)
     GIVEN ainda não foi feita uma auto-avaliação nas metas “Entender conceitos de requisitos”  e “Especificar requisitos com qualidade”
     WHEN eu faço a avaliação na meta “Entender conceitos de requisitos”  com o conceito “MA”
     THEN a auto-avaliação não é armazenada no sistema
+
+Cenário: nenhuma auto-avaliação discrepante
+    GIVEN eu estou logado no sistema com o usuário “professor Paulo”
+    AND eu estou na página “avaliações”
+    AND eu vejo o aluno “Lucas” com os conceito “MPA”, “MA”, “MA”, “MA” e “MA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
+    AND eu vejo o aluno “Pedro” com os conceito “MPA”, “MPA”, “MPA”, “MPA” e “MPA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
+    AND eu vejo o aluno “Silvio” com os conceito “MA”, “MA”, “MA”, “MA” e “MA”, e com a auto-avaliação “MPA”, “MPA”, “MPA”, “MPA” e “MPA” nas metas “a”, “b”, “c”, “d” e “e”

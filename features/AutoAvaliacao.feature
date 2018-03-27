@@ -55,3 +55,5 @@ Cenário: auto-avaliação discrepante com vies prejudicial ao aluno
 "teste rebase master"
 
 "teste rebase discrepantes"
+
+novo cenário de visualização de percentual de discrepância!!!

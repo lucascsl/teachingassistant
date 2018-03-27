@@ -35,4 +35,16 @@ Cenário: nenhuma auto-avaliação discrepante
     AND eu estou na página “avaliações”
     AND eu vejo o aluno “Lucas” com os conceito “MPA”, “MA”, “MA”, “MA” e “MA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
     AND eu vejo o aluno “Pedro” com os conceito “MPA”, “MPA”, “MPA”, “MPA” e “MPA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
+    AND eu vejo o aluno “Silvio” com os conceito “MA”, “MA”, “MA”, “MA” e “MA”, e com a auto-avaliação “MPA”, “MPA”, “MPA”, “MPA” e “MPA” nas metas “a”, “b”, “c”, “d” e “e”WHEN eu seleciono a opção “verificar avaliações com viés prejudicial”
+    THEN eu vejo a mensagem “nenhuma avaliação com viés prejudicial”
+
+Cenário: auto-avaliação discrepante com vies prejudicial ao aluno
+    GIVEN eu estou logado no sistema com o usuário “professor Paulo”
+    AND eu estou na página “avaliações”
+    AND eu vejo o aluno “Lucas” com os conceito “MPA”, “MPA”, “MPA”, “MA” e “MA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
+    AND eu vejo o aluno “Pedro” com os conceito “MPA”, “MPA”, “MPA”, “MPA” e “MPA”, e com a auto-avaliação “MA”, “MA”, “MA”, “MA” e “MA” nas metas “a”, “b”, “c”, “d” e “e”
     AND eu vejo o aluno “Silvio” com os conceito “MA”, “MA”, “MA”, “MA” e “MA”, e com a auto-avaliação “MPA”, “MPA”, “MPA”, “MPA” e “MPA” nas metas “a”, “b”, “c”, “d” e “e”
+    WHEN eu seleciono a opção “verificar avaliações com viés prejudicial”
+    THEN eu sou redirecionado para a página “Avaliações descrepantes”
+    AND eu vejo a mensagem “1 aluno com auto avaliação descrepante”
+    AND eu vejo o aluno “Lucas” com “60% das avaliações prejudiciais ao aluno”

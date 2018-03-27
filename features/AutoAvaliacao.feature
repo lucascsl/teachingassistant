@@ -51,4 +51,7 @@ Cenário: auto-avaliação discrepante com vies prejudicial ao aluno
     AND eu vejo a mensagem “1 aluno com auto avaliação descrepante”
     AND eu vejo o aluno “Lucas” com “60% das avaliações prejudiciais ao aluno”
 
+
 "teste rebase master"
+
+"teste rebase discrepantes"

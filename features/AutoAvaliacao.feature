@@ -48,3 +48,5 @@ Cenário: auto-avaliação discrepante com vies prejudicial ao aluno
     THEN eu sou redirecionado para a página “Avaliações descrepantes”
     AND eu vejo a mensagem “1 aluno com auto avaliação descrepante”
     AND eu vejo o aluno “Lucas” com “60% das avaliações prejudiciais ao aluno”
+
+"teste rebase discrepantes"

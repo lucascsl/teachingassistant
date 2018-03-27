@@ -29,3 +29,4 @@ Cenário: auto-avaliação inválida (controlador)
     GIVEN ainda não foi feita uma auto-avaliação nas metas “Entender conceitos de requisitos”  e “Especificar requisitos com qualidade”
     WHEN eu faço a avaliação na meta “Entender conceitos de requisitos”  com o conceito “MA”
     THEN a auto-avaliação não é armazenada no sistema
+    THEN ???

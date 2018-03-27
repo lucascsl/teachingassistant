@@ -16,3 +16,16 @@ Cenário: auto-avaliação válida (controlador)
     WHEN eu faço a avaliação na meta “Entender conceitos de requisitos”  com o conceito “MA”
     AND eu faço a avaliação na meta “Especificar requisitos com qualidade” com o concetio “MPA”
     THEN a auto-avaliação e armazenada no sistema
+
+Cenário: auto-avaliação inválida (GUI)
+    GIVEN eu estou logado no sistema com o usuário “aluno Lucas”
+    AND eu estou na página “auto-avaliação”
+    AND eu vejo as metas “Entender conceitos de requisitos”  e “Especificar requisitos com qualidade”
+    WHEN eu preencho a meta “Entender conceitos de requisitos” com o conceito “MA”
+    AND eu seleciono a opção “confirmar auto-avaliação”
+    THEN eu vejo uma mensagem “meta ainda não avaliada” sobre a meta “Especificar requisitos com qualidade”
+
+Cenário: auto-avaliação inválida (controlador) 
+    GIVEN ainda não foi feita uma auto-avaliação nas metas “Entender conceitos de requisitos”  e “Especificar requisitos com qualidade”
+    WHEN eu faço a avaliação na meta “Entender conceitos de requisitos”  com o conceito “MA”
+    THEN a auto-avaliação não é armazenada no sistema
